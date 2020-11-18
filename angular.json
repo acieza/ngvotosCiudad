@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngvotosCiudad"
+    }
+  },
+  "defaultProject": "ngvotosCiudad",
+  "cli": {
+    "analytics": "ec2783c9-45b7-4fd4-b310-356984baf685"
+  }
 }

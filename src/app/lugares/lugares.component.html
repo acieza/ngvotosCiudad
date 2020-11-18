@@ -1,0 +1,14 @@
+<div class="caja">
+    
+    <div class="imagen"><img [src]="datosLugar.imagen"></div>
+    <div class="centrar">
+        <div class="corazon" (click)="masVotos(datosLugar._id)"><img *ngIf="banderaVotos==true" src="assets/img/me-gusta.png" alt=""> <img src="assets/img/nomeGusta.png" *ngIf="banderaVotos==false" alt=""></div>
+        <img src="assets/img/burbuja-de-dialogo.png"  alt=""> 
+        <img src="assets/img/enviar.png" alt="">
+    </div>
+    
+    <div class="likes"><span class="a">A </span>{{datosLugar.likes}} <span class="personasL">Personas les ha gustado la publicación</span></div>
+    <div class="titulo">{{datosLugar.titulo}}</div>
+    <div class="detalle">{{datosLugar.detalle}}</div>
+    
+</div>

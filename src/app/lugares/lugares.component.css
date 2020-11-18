@@ -1,0 +1,40 @@
+.caja{
+    height: 400px;
+    width: 300px;
+    border: 1px solid black;
+}
+.imagen{
+    height: 60%;
+    width: 100%;
+}
+.imagen img{
+    height: 100%;
+    width: 100%;
+}
+.titulo{
+    font-size: 20px;
+    font-style: italic;
+}
+.detalle{
+    margin-top: 0.5em;
+    font-size: 14px;
+}
+.personasL{
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+   
+}
+.likes{
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #bebbbb;
+}
+.centrar img{
+    height: 1.5em;
+    margin-right: 0.5em;
+}
+.centrar{
+    display: flex;
+    margin: 0.3em;
+}
+
