@@ -1,5 +1,5 @@
 <section class="todo">
-  <app-lugares *ngFor="let item of votos" [datosLugar]="item"></app-lugares>
+  <app-lugares *ngFor="let item of votos" [datosLugar]="item" (sumaVoto)="masmas($event._id,'')" (restaVoto)="menosmenos($event._id,'')"></app-lugares>
 </section>
 
 

@@ -28,6 +28,22 @@ export class AppComponent implements OnInit {
       this.votos = lugares
     });
   }
+masmas(id:string,newVoto:Votos){
+    this.lugarService.moreVote(id, newVoto)
+    .subscribe(votaciones => {
+      let newnuevo = this.votos.filter( (nuevo)=>{//v =>v._id==id);
+      return nuevo._id==id;
+       });
+      //newnuevo=votaciones;
+    /* this.cargaLugares();*/
+    })
+  }
 
+  menosmenos(id:string,newVoto:Votos){
+    this.lugarService.lessVote(id, newVoto)
+    .subscribe(votaciones => {
+    /* this.cargaLugares();*/
+    })
+  }
   
 }

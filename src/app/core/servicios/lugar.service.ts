@@ -12,4 +12,11 @@ export class LugarService {
   getAllsitios(){
     return this.http.get<Votos[]>('http://localhost:3000/votos');
   }
+
+  moreVote(id:string,newVoto: Votos){
+      return this.http.put<Votos>(`http://192.168.1.130:3000/votos/votomas/${id}`,newVoto);
+  }
+  lessVote(id:string,newVoto: Votos){
+    return this.http.put<Votos>(`http://192.168.1.130:3000/votos/votomenos/${id}`,newVoto);
+  }
 }

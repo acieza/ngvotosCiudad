@@ -2,20 +2,25 @@
     height: 400px;
     width: 300px;
     border: 1px solid black;
+    border-radius: 1em;
 }
 .imagen{
+    
     height: 60%;
     width: 100%;
 }
 .imagen img{
+    border-radius: 1em 1em 0em 0em;
     height: 100%;
     width: 100%;
 }
 .titulo{
+    margin-left: 0.5em;
     font-size: 20px;
     font-style: italic;
 }
 .detalle{
+    margin-left: 0.5em;
     margin-top: 0.5em;
     font-size: 14px;
 }
@@ -26,6 +31,7 @@
    
 }
 .likes{
+    margin-left: 0.5em;
     margin-bottom: 0.5em;
     border-bottom: 1px solid #bebbbb;
 }
