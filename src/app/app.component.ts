@@ -38,6 +38,13 @@ masmas(id:string,newVoto:Votos){
      newnuevo[0]=votaciones;
      console.log(newnuevo[0]);
      console.log(this.votos);
+     for(let x=0;x<this.votos.length;x++){
+       if (this.votos[x]._id===newnuevo[0]._id){
+         this.votos[x]=newnuevo[0];
+         
+       }
+     }
+     //this.votos.splice(1,)
      //newnuevo = votaciones
     /* this.cargaLugares();*/
     });
