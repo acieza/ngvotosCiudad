@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { LugarService } from './core/servicios/lugar.service';
 import { Votos } from './votos';
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit {
  
 
   votos: Votos[]=[];
-
+ 
   constructor(private lugarService: LugarService){}
 
 
@@ -31,18 +32,22 @@ export class AppComponent implements OnInit {
 masmas(id:string,newVoto:Votos){
     this.lugarService.moreVote(id, newVoto)
     .subscribe(votaciones => {
-      let newnuevo = this.votos.filter( (nuevo)=>{//v =>v._id==id);
-      return nuevo._id==id;
-       });
-      //newnuevo=votaciones;
+          let newnuevo=this.votos.filter( Votos => Votos._id===id )
+      console.log( newnuevo);
+      console.log(votaciones)
+     newnuevo[0]=votaciones;
+     console.log(newnuevo[0]);
+     console.log(this.votos);
+     //newnuevo = votaciones
     /* this.cargaLugares();*/
-    })
+    });
   }
 
   menosmenos(id:string,newVoto:Votos){
     this.lugarService.lessVote(id, newVoto)
     .subscribe(votaciones => {
     /* this.cargaLugares();*/
+    console.log( votaciones);
     })
   }
   
