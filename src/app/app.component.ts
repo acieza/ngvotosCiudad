@@ -32,21 +32,9 @@ export class AppComponent implements OnInit {
 masmas(id:string,newVoto:Votos){
     this.lugarService.moreVote(id, newVoto)
     .subscribe(votaciones => {
-          let newnuevo=this.votos.filter( Votos => Votos._id===id )
-      console.log( newnuevo);
-      console.log(votaciones)
-     newnuevo[0]=votaciones;
-     console.log(newnuevo[0]);
-     console.log(this.votos);
-     for(let x=0;x<this.votos.length;x++){
-       if (this.votos[x]._id===newnuevo[0]._id){
-         this.votos[x]=newnuevo[0];
-         
-       }
-     }
-     //this.votos.splice(1,)
-     //newnuevo = votaciones
-    /* this.cargaLugares();*/
+      let newnuevo=this.votos.find( Votos => Votos._id===id )
+       
+    newnuevo.likes ++;
     });
   }
 
@@ -54,7 +42,9 @@ masmas(id:string,newVoto:Votos){
     this.lugarService.lessVote(id, newVoto)
     .subscribe(votaciones => {
     /* this.cargaLugares();*/
-    console.log( votaciones);
+    let newnuevo=this.votos.find( Votos => Votos._id===id )
+
+    newnuevo.likes --;
     })
   }
   
